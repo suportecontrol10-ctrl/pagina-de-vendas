@@ -20,7 +20,7 @@
     />
     <meta
       property="og:description"
-      content="Calcule o preço ideal de venda das suas receitas automaticamente. Sistema completo com licença vitalícia."
+      content="Descubra o preço ideal de venda das suas receitas automaticamente. Pare de perder dinheiro com precificação no achismo."
     />
     <meta property="og:type" content="product" />
     <meta
@@ -89,9 +89,7 @@
       }
     </script>
 
-    <title>
-      Precifica+ | Sistema Profissional de Precificação de Receitas - Control10
-    </title>
+    <title>Precifica+ | Pare de perder dinheiro com precificação errada</title>
 
     <style>
       /* ============================================
@@ -152,6 +150,9 @@
         color: var(--text-dark);
         overflow-x: hidden;
         background: var(--white);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       img {
@@ -380,6 +381,7 @@
         gap: 5px;
         background: none;
         padding: 5px;
+        z-index: 1001;
       }
 
       .mobile-menu-btn span {
@@ -446,7 +448,7 @@
 
       .hero-description {
         color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         font-size: 1.1rem;
         line-height: 1.8;
       }
@@ -455,7 +457,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       .hero-badge {
@@ -493,24 +495,21 @@
         }
       }
 
+      /* REMOVIDA A MOLDURA CINZA: fundo transparente, sem borda, sem padding */
       .hero-image-wrapper {
         position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-xl);
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        aspect-ratio: 1/1;
+        overflow: visible;
+        background: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .hero-image img {
-        border-radius: 12px;
+      .hero-image-wrapper img {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
-        box-shadow: var(--shadow-lg);
+        border-radius: 12px;
       }
 
       .floating-elements {
@@ -574,6 +573,22 @@
         width: 24px;
         height: 24px;
         fill: var(--primary-green);
+      }
+
+      .hotmart-trust {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .hotmart-trust svg {
+        width: 18px;
+        height: 18px;
+        fill: #ff6b6b;
       }
 
       /* ============================================
@@ -1529,6 +1544,9 @@
         color: var(--white);
         padding: 60px 0 30px;
         text-align: center;
+        position: relative;
+        z-index: 10;
+        margin-top: auto;
       }
 
       .footer-logo {
@@ -1625,18 +1643,22 @@
           top: 100%;
           left: 0;
           right: 0;
-          background: rgba(26, 26, 26, 0.95);
+          background: rgba(26, 26, 26, 0.98);
           flex-direction: column;
           padding: 20px 0;
-          transition: opacity 0.3s ease;
+          transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
           opacity: 0;
           pointer-events: none;
+          transform: translateY(-10px);
         }
 
         .header.menu-open .nav-links {
           display: flex;
           opacity: 1;
           pointer-events: all;
+          transform: translateY(0);
         }
 
         .header.menu-open .mobile-menu-btn span:nth-child(1) {
@@ -1704,6 +1726,10 @@
           width: 28px;
           height: 28px;
         }
+
+        .hotmart-trust {
+          justify-content: center;
+        }
       }
 
       @media (max-width: 480px) {
@@ -1751,8 +1777,8 @@
           <img src="https://i.imgur.com/XPeGKQA.png" alt="Control10 Logo" />
         </div>
         <nav class="nav-links">
-          <a href="#beneficios">Benefícios</a>
-          <a href="#recursos">Recursos</a>
+          <a href="#problema">O problema</a>
+          <a href="#solucao">Solução</a>
           <a href="#demo">Demonstração</a>
           <a href="#preco">Preço</a>
           <a href="#faq">FAQ</a>
@@ -1760,7 +1786,7 @@
             href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
             class="btn btn-primary"
             style="padding: 10px 25px; font-size: 0.95rem"
-            >Comprar Agora</a
+            >Comprar agora</a
           >
         </nav>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
@@ -1792,17 +1818,18 @@
       <div class="container hero-container">
         <div class="hero-content fade-in">
           <h1>
-            Precifique Suas Receitas
-            <span>Com Precisão Profissional</span>
+            Você Sabe Quanto Realmente Lucra em cada prato que vende?
+            <span>Pare de Perder Dinheiro com Precificação no "Achismo"</span>
           </h1>
           <p class="hero-subtitle">
-            Sistema completo que calcula automaticamente custos, margem de lucro
-            e preço ideal de venda das suas receitas culinárias
+            Descubra automaticamente o preço ideal de venda de cada receita,
+            cubra todos os seus custos e garanta o lucro que seu restaurante,
+            pizzaria, hamburgueria ou lanchonete merece.
           </p>
           <p class="hero-description">
-            Chega de perder dinheiro com precificação errada. Tenha controle
-            total dos seus custos e maximize seus lucros com uma ferramenta
-            simples, intuitiva e poderosa.
+            Chega de trabalhar muito e ver o dinheiro sumir. Com o Precifica+,
+            você tem controle total dos seus custos e maximiza seus lucros com
+            uma ferramenta simples, intuitiva e poderosa.
           </p>
 
           <div class="hero-badges">
@@ -1812,22 +1839,22 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              Compra Segura
+              Compra 100% segura
             </div>
 
             <div class="hero-badge">
               <svg viewBox="0 0 24 24">
                 <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
                 />
               </svg>
-              R$ 129,90
+              Apenas R$ 129,90
             </div>
 
             <div class="hero-badge">
               <svg viewBox="0 0 24 24">
                 <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
                 />
               </svg>
               Sem mensalidades
@@ -1839,25 +1866,7 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              Licença Vitalícia
-            </div>
-
-            <div class="hero-badge">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
-              Suporte gratuito
-            </div>
-
-            <div class="hero-badge">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
-              Acesso imediato
+              Licença vitalícia
             </div>
           </div>
 
@@ -1870,14 +1879,28 @@
                 d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
               />
             </svg>
-            Comprar agora via Hotmart
+            Quero precificar com lucro agora
           </a>
+
+          <div class="hotmart-trust">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
+              />
+            </svg>
+            <span>Compra 100% segura processada pela Hotmart</span>
+          </div>
         </div>
 
         <div class="hero-image fade-in">
           <div class="hero-image-wrapper">
+            <!-- IMAGEM SUBSTITUÍDA E SEM MOLDURA CINZA -->
             <img
-              src="https://i.imgur.com/MkN5tIt.png"
+              src="https://i.imgur.com/OdCDxg8.png"
+              alt="Empresário de sucesso usando o sistema"
+            />
+            <img
+              src="https://i.imgur.com/cKnjpn4.png"
               alt="Sistema Precifica+ - Interface Principal"
             />
           </div>
@@ -1888,7 +1911,7 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              + Lucro Garantido
+              + Lucro garantido
             </div>
             <div class="float-item">
               <svg viewBox="0 0 24 24">
@@ -1896,7 +1919,7 @@
                   d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
                 />
               </svg>
-              R$ 0,00 Mensalidade
+              R$ 0,00 mensalidade
             </div>
             <div class="float-item">
               <svg viewBox="0 0 24 24">
@@ -1911,45 +1934,264 @@
       </div>
     </section>
 
-    <!-- Seção Empresário -->
-    <section class="entrepreneur-section">
-      <div class="container entrepreneur-container">
-        <div class="entrepreneur-image fade-in">
-          <div class="entrepreneur-image-wrapper">
-            <img
-              src="https://i.imgur.com/OdCDxg8.png"
-              alt="Empresário de sucesso usando o sistema"
-            />
+    <!-- Vídeo Demonstração -->
+    <section class="video-section" id="demo">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          Veja como é fácil parar de perder dinheiro
+        </h2>
+        <p class="section-subtitle fade-in">
+          Assista a este vídeo rápido e descubra como o Precifica+ faz o
+          trabalho pesado de calcular seus lucros automaticamente.
+        </p>
+
+        <div class="video-container fade-in">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/b3xj2XGbY7E?start=51&rel=0&modestbranding=1&playsinline=1"
+              title="Demonstração do Sistema Precifica+"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
+            </iframe>
           </div>
-          <div class="entrepreneur-badge">+2000 Empresas Atendidas</div>
         </div>
-        <div class="entrepreneur-content fade-in">
-          <h2>Transforme Seu <span>Negócio Alimentício</span></h2>
-          <p>
-            Assim como milhares de empreendedores do setor alimentício, você
-            também pode ter controle total sobre os custos e lucros do seu
-            negócio. Seja você dono de restaurante, lanchonete, confeitaria ou
-            food truck, o Precifica+ é a ferramenta que faltava para
-            profissionalizar sua gestão.
-          </p>
-          <p>
-            Chega de achismos na hora de precificar! Com nosso sistema, você
-            toma decisões baseadas em dados reais e garante a sustentabilidade e
-            crescimento do seu negócio.
-          </p>
-          <div class="entrepreneur-stats">
-            <div class="entrepreneur-stat">
-              <span class="entrepreneur-stat-number">98%</span>
-              <div class="entrepreneur-stat-label">Clientes Satisfeitos</div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
+            class="btn btn-primary btn-large btn-pulse fade-in"
+          >
+            Quero ter esse sistema no meu negócio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Problema -->
+    <section class="section" id="problema" style="background: var(--light-bg)">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          O preço errado está comendo o seu lucro silenciosamente
+        </h2>
+        <p class="section-subtitle fade-in" style="color: var(--text-light)">
+          Se você se identifica com alguma dessas situações, seu negócio está em
+          risco:
+        </p>
+        <div class="features-grid">
+          <div class="feature-card fade-in">
+            <div class="feature-content">
+              <h3>❌ Lucro incerto</h3>
+              <p>
+                Você vende muito, mas no final do mês o dinheiro não sobra. Sabe
+                por quê? Porque não sabe o custo real de cada prato.
+              </p>
             </div>
-            <div class="entrepreneur-stat">
-              <span class="entrepreneur-stat-number">+30%</span>
-              <div class="entrepreneur-stat-label">Aumento Médio de Lucro</div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-content">
+              <h3>❌ Ingredientes que subiram</h3>
+              <p>
+                O preço da carne, do óleo ou da farinha aumentou, mas você
+                continua cobrando o mesmo valor, absorvendo o prejuízo.
+              </p>
             </div>
-            <div class="entrepreneur-stat">
-              <span class="entrepreneur-stat-number">24h</span>
-              <div class="entrepreneur-stat-label">Suporte Disponível</div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-content">
+              <h3>❌ Despesas escondidas</h3>
+              <p>
+                Seu preço de venda não cobre o aluguel, a conta de luz, o gás e
+                os funcionários. Você está pagando para trabalhar.
+              </p>
             </div>
+          </div>
+          <div class="feature-card fade-in">
+            <div class="feature-content">
+              <h3>❌ Medo do CMV</h3>
+              <p>
+                Você já ouviu falar em custo de mercadoria vendida, mas não tem
+                a menor ideia de como calcular ou controlar o seu.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
+            class="btn btn-primary btn-large btn-pulse fade-in"
+          >
+            Quero parar de perder dinheiro agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Solução e Como Funciona -->
+    <section class="section" id="solucao" style="background: var(--white)">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          Como o Precifica+ resolve isso em 4 passos simples
+        </h2>
+        <p class="section-subtitle fade-in" style="color: var(--text-light)">
+          Sem planilhas complicadas. Sem precisar ser um contador.
+        </p>
+        <div class="features-grid">
+          <div
+            class="feature-card fade-in"
+            style="
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <div class="feature-icon" style="margin-bottom: 15px">
+              <span style="font-size: 1.5rem; font-weight: 800">1</span>
+            </div>
+            <div class="feature-content">
+              <h3>Cadastre os ingredientes</h3>
+              <p>
+                Informe o que você compra e quanto paga. O sistema calcula o
+                custo unitário automaticamente.
+              </p>
+            </div>
+          </div>
+          <div
+            class="feature-card fade-in"
+            style="
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <div class="feature-icon" style="margin-bottom: 15px">
+              <span style="font-size: 1.5rem; font-weight: 800">2</span>
+            </div>
+            <div class="feature-content">
+              <h3>Monte suas receitas</h3>
+              <p>
+                Selecione os ingredientes e as quantidades usadas em cada prato,
+                hambúrguer ou doce.
+              </p>
+            </div>
+          </div>
+          <div
+            class="feature-card fade-in"
+            style="
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <div class="feature-icon" style="margin-bottom: 15px">
+              <span style="font-size: 1.5rem; font-weight: 800">3</span>
+            </div>
+            <div class="feature-content">
+              <h3>Informe as despesas</h3>
+              <p>
+                Adicione suas despesas fixas (aluguel, luz, etc.) para que o
+                sistema rateie corretamente.
+              </p>
+            </div>
+          </div>
+          <div
+            class="feature-card fade-in"
+            style="
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <div class="feature-icon" style="margin-bottom: 15px">
+              <span style="font-size: 1.5rem; font-weight: 800">4</span>
+            </div>
+            <div class="feature-content">
+              <h3>Venda com lucro garantido</h3>
+              <p>
+                O sistema calcula custo, CMV, margem e o preço ideal de venda. É
+                só aplicar no seu cardápio!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
+            class="btn btn-primary btn-large btn-pulse fade-in"
+          >
+            Quero precificar meu cardápio agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Provas Sociais -->
+    <section class="section" style="background: var(--light-bg)">
+      <div class="container">
+        <h2 class="section-title fade-in">Quem usa, aprova e lucra mais</h2>
+        <p class="section-subtitle fade-in" style="color: var(--text-light)">
+          Junte-se a mais de 2.000 empreendedores que transformaram a gestão dos
+          seus negócios alimentícios.
+        </p>
+        <div class="benefits-grid">
+          <div class="benefit-card fade-in">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              "Eu achava que lucrava, mas quando usei o Precifica+, descobri que
+              estava pagando para trabalhar em 3 itens do meu cardápio. Hoje meu
+              lucro aumentou 30%!"
+            </p>
+            <p
+              style="
+                margin-top: 15px;
+                font-weight: 600;
+                color: var(--primary-green);
+              "
+            >
+              - Carlos, dono de hamburgueria
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              "Simples, rápido e funciona no meu celular. Consigo atualizar o
+              preço dos meus bolos na hora que o ingrediente aumenta. Indico
+              para todas as confeiteiras."
+            </p>
+            <p
+              style="
+                margin-top: 15px;
+                font-weight: 600;
+                color: var(--primary-green);
+              "
+            >
+              - Ana Paula, confeitaria artesanal
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+              "O melhor investimento que fiz para minha pizzaria. O cálculo de
+              CMV e despesas fixas me deu uma clareza que eu nunca tive antes."
+            </p>
+            <p
+              style="
+                margin-top: 15px;
+                font-weight: 600;
+                color: var(--primary-green);
+              "
+            >
+              - Roberto, pizzaria do bairro
+            </p>
           </div>
         </div>
       </div>
@@ -1958,7 +2200,7 @@
     <!-- Benefícios -->
     <section class="benefits" id="beneficios">
       <div class="container">
-        <h2 class="section-title fade-in">Por Que Escolher o Precifica+?</h2>
+        <h2 class="section-title fade-in">Por que escolher o Precifica+?</h2>
         <p class="section-subtitle fade-in">
           A solução definitiva para quem quer profissionalizar a gestão de
           receitas e aumentar os lucros
@@ -1973,10 +2215,10 @@
                 />
               </svg>
             </div>
-            <h3>Licença Vitalícia</h3>
+            <h3>Nunca mais precifique no "achismo"</h3>
             <p>
-              Pague uma única vez e use para sempre. Sem mensalidades, sem
-              surpresas, sem preocupações.
+              Tenha dados reais e precisos para tomar decisões. Chega de chutar
+              preços e torcer para dar lucro.
             </p>
           </div>
 
@@ -1988,10 +2230,10 @@
                 />
               </svg>
             </div>
-            <h3>Acesso Imediato</h3>
+            <h3>Descubra seu lucro real</h3>
             <p>
-              Receba o sistema no seu e-mail instantaneamente após a confirmação
-              do pagamento. Comece a usar agora!
+              Saiba exatamente quanto você ganha em cada venda, descontando
+              todos os custos e despesas fixas.
             </p>
           </div>
 
@@ -2003,10 +2245,10 @@
                 />
               </svg>
             </div>
-            <h3>Multiplataforma</h3>
+            <h3>Proteção contra a inflação</h3>
             <p>
-              Funciona em Android, Windows, macOS e Linux. Use no celular,
-              tablet ou computador.
+              Quando os ingredientes aumentam, você atualiza o sistema em
+              segundos e sabe exatamente quanto reajustar.
             </p>
           </div>
 
@@ -2018,10 +2260,10 @@
                 />
               </svg>
             </div>
-            <h3>Funciona Offline</h3>
+            <h3>Funciona offline</h3>
             <p>
-              Instalado no seu dispositivo, funciona sem internet. Seus dados
-              ficam seguros e acessíveis sempre.
+              Sem internet? Sem problemas. Seus dados ficam seguros no seu
+              dispositivo, sem depender de nuvem.
             </p>
           </div>
 
@@ -2033,10 +2275,10 @@
                 />
               </svg>
             </div>
-            <h3>Sem Assinatura</h3>
+            <h3>Pagamento único</h3>
             <p>
-              Nada de cobranças recorrentes. Você compra uma vez e o sistema é
-              seu definitivamente.
+              Nada de mensalidades ou cobranças recorrentes. Você compra uma vez
+              e o sistema é seu definitivamente.
             </p>
           </div>
 
@@ -2048,10 +2290,10 @@
                 />
               </svg>
             </div>
-            <h3>Fácil de Usar</h3>
+            <h3>Fácil de usar</h3>
             <p>
-              Interface intuitiva e simples. Qualquer pessoa consegue usar sem
-              complicação ou treinamento complexo.
+              Feito para donos de negócios, não para contadores. Interface
+              simples, direta e sem complicação.
             </p>
           </div>
         </div>
@@ -2085,313 +2327,10 @@
       </div>
     </section>
 
-    <!-- Recursos -->
-    <section class="features section" id="recursos">
-      <div class="container">
-        <h2 class="section-title fade-in">Recursos Completos</h2>
-        <p class="section-subtitle fade-in" style="color: var(--text-light)">
-          Tudo o que você precisa para gerenciar suas receitas de forma
-          profissional e lucrativa
-        </p>
-
-        <div class="features-grid">
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Cadastro de Receitas</h3>
-              <p>
-                Organize todas as suas receitas em um único lugar de forma
-                simples e rápida.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Nome e descrição detalhada
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Fotos ilustrativas
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Rendimento da receita
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1v4.05h-5l1.65 16.48c.1.82.79 1.46 1.63 1.46h1.66v-4h1.06v4zM7 20.99c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2s2 .9 2 2v9.99c0 1.1-.9 2-2 2zM7 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Controle de Ingredientes</h3>
-              <p>
-                Cadastre todos os ingredientes com seus respectivos custos e
-                quantidades.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Custo unitário automático
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Diferentes unidades de medida
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Histórico de preços
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Despesas Fixas</h3>
-              <p>
-                Controle todas as despesas fixas do seu negócio para um cálculo
-                preciso.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Rateio automático
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Categorização de despesas
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Controle mensal
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Precificação Automática</h3>
-              <p>
-                Cálculo automático do preço de venda ideal baseado em margem de
-                lucro desejada.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Custo total da receita
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Margem de lucro configurável
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Preço de venda sugerido
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Ficha Técnica em PDF</h3>
-              <p>
-                Exporte fichas técnicas profissionais em PDF para impressão ou
-                compartilhamento.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Layout profissional
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Todos os dados da receita
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Pronto para imprimir
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"
-                />
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Resultados Instantâneos</h3>
-              <p>
-                Visualize imediatamente todos os cálculos e tome decisões com
-                confiança.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Dashboard intuitivo
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Relatórios detalhados
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  Análise de lucratividade
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vídeo Demonstração -->
-    <section class="video-section" id="demo">
-      <div class="container">
-        <h2 class="section-title fade-in">Conheça o Sistema</h2>
-        <p class="section-subtitle fade-in">
-          Veja como é fácil e intuitivo usar o Precifica+ em qualquer
-          dispositivo
-        </p>
-
-        <div class="video-container fade-in">
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/b3xj2XGbY7E?start=51&rel=0&modestbranding=1&playsinline=1"
-              title="Demonstração do Sistema Precifica+"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- O Que Recebe -->
     <section class="deliverables section">
       <div class="container">
-        <h2 class="section-title fade-in">O Que Você Recebe</h2>
+        <h2 class="section-title fade-in">O que você recebe hoje</h2>
         <p class="section-subtitle fade-in">
           Ao adquirir o Precifica+, você leva muito mais do que um simples
           sistema
@@ -2406,7 +2345,7 @@
                 />
               </svg>
             </div>
-            <div class="deliverable-text">Sistema Completo de Precificação</div>
+            <div class="deliverable-text">Sistema completo de precificação</div>
           </div>
 
           <div class="deliverable-item fade-in">
@@ -2418,7 +2357,7 @@
               </svg>
             </div>
             <div class="deliverable-text">
-              Licença Vitalícia (Sem Mensalidades)
+              Licença vitalícia (sem mensalidades)
             </div>
           </div>
 
@@ -2430,7 +2369,7 @@
                 />
               </svg>
             </div>
-            <div class="deliverable-text">Vídeo Treinamento Completo</div>
+            <div class="deliverable-text">Vídeo treinamento completo</div>
           </div>
 
           <div class="deliverable-item fade-in">
@@ -2441,7 +2380,7 @@
                 />
               </svg>
             </div>
-            <div class="deliverable-text">Suporte Técnico Gratuito</div>
+            <div class="deliverable-text">Suporte técnico gratuito</div>
           </div>
 
           <div class="deliverable-item fade-in">
@@ -2452,7 +2391,7 @@
                 />
               </svg>
             </div>
-            <div class="deliverable-text">Acesso Imediato Após Pagamento</div>
+            <div class="deliverable-text">Acesso imediato após pagamento</div>
           </div>
 
           <div class="deliverable-item fade-in">
@@ -2480,12 +2419,31 @@
         </p>
 
         <div class="pricing-card fade-in">
-          <div class="pricing-badge">MAIS POPULAR</div>
+          <div class="pricing-badge">Mais popular</div>
 
           <div class="pricing-header">
-            <div class="pricing-label">Sistema Completo Precifica+</div>
+            <div
+              class="pricing-label"
+              style="text-decoration: line-through; opacity: 0.7"
+            >
+              De R$ 397,00
+            </div>
+            <div class="pricing-label">Hoje, por apenas:</div>
             <div class="pricing-amount"><span>R$</span>129,90</div>
-            <div class="pricing-installments">ou 2x de R$ 64,95 sem juros</div>
+            <div class="pricing-installments">
+              ou 2x de R$ 64,95 sem juros no cartão
+            </div>
+            <div
+              class="badge"
+              style="
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--light-green);
+                margin-top: 10px;
+                display: inline-flex;
+              "
+            >
+              Pagamento único • Sem mensalidades
+            </div>
           </div>
 
           <ul class="pricing-features">
@@ -2511,7 +2469,7 @@
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
-              Vídeo treinamento completo
+              Vídeo treinamento completo incluso
             </li>
             <li>
               <svg viewBox="0 0 24 24">
@@ -2564,10 +2522,63 @@
       </div>
     </section>
 
+    <!-- Garantia -->
+    <section
+      class="section"
+      style="background: var(--white); text-align: center"
+    >
+      <div class="container">
+        <div
+          class="fade-in"
+          style="
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--light-bg);
+            border-radius: 20px;
+            border: 2px solid var(--primary-green);
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+            fill="var(--primary-green)"
+            style="margin-bottom: 20px"
+          >
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+            />
+          </svg>
+          <h3
+            style="
+              font-size: 2rem;
+              margin-bottom: 15px;
+              color: var(--text-dark);
+            "
+          >
+            Garantia incondicional de 7 dias
+          </h3>
+          <p
+            style="
+              font-size: 1.1rem;
+              color: var(--text-light);
+              line-height: 1.6;
+            "
+          >
+            Você tem 7 dias de garantia para testar o Precifica+. Se por
+            qualquer motivo você achar que o sistema não é para você, basta
+            enviar um e-mail e devolvemos 100% do seu dinheiro. Sem perguntas,
+            sem burocracia. O risco é todo nosso.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Sobre o Desenvolvedor -->
     <section class="about section">
       <div class="container">
-        <h2 class="section-title fade-in">Quem Desenvolveu</h2>
+        <h2 class="section-title fade-in">Quem desenvolveu</h2>
         <p class="section-subtitle fade-in" style="color: var(--text-light)">
           Conheça o profissional por trás deste sistema
         </p>
@@ -2577,7 +2588,7 @@
             <div class="about-image-wrapper">
               <img
                 src="https://i.imgur.com/xzgIbyX.png"
-                alt="Douglas Araújo - Fundador e Desenvolvedor"
+                alt="Douglas Araújo - Fundador e desenvolvedor"
               />
             </div>
           </div>
@@ -2585,17 +2596,17 @@
           <div class="about-text">
             <h3>Douglas Araújo</h3>
             <div class="about-role">
-              Engenheiro de Software & Consultor em Gestão Empresarial
+              Engenheiro de software & consultor em gestão empresarial
             </div>
 
             <div class="about-stats">
               <div class="stat-item">
                 <span class="stat-number counter" data-target="10">0</span>
-                <div class="stat-label">Anos de Experiência</div>
+                <div class="stat-label">Anos de experiência</div>
               </div>
               <div class="stat-item">
                 <span class="stat-number counter" data-target="2000">0</span>
-                <div class="stat-label">Empresas Atendidas</div>
+                <div class="stat-label">Empresas atendidas</div>
               </div>
             </div>
 
@@ -2619,7 +2630,7 @@
     <!-- Credibilidade -->
     <section class="credibility section">
       <div class="container">
-        <h2 class="section-title fade-in">Por Que Confiar na Control10?</h2>
+        <h2 class="section-title fade-in">Por que confiar na Control10?</h2>
         <p class="section-subtitle fade-in" style="color: var(--text-light)">
           Empresa séria e comprometida com a sua satisfação
         </p>
@@ -2633,7 +2644,7 @@
                 />
               </svg>
             </div>
-            <h4>Compra Segura</h4>
+            <h4>Compra segura</h4>
             <p>
               Ambiente 100% seguro com criptografia SSL para proteção dos seus
               dados
@@ -2648,7 +2659,7 @@
                 />
               </svg>
             </div>
-            <h4>Entrega Imediata</h4>
+            <h4>Entrega imediata</h4>
             <p>Acesso liberado automaticamente após confirmação do pagamento</p>
           </div>
 
@@ -2660,7 +2671,7 @@
                 />
               </svg>
             </div>
-            <h4>Suporte Especializado</h4>
+            <h4>Suporte especializado</h4>
             <p>
               Equipe pronta para atender e solucionar suas dúvidas rapidamente
             </p>
@@ -2674,13 +2685,13 @@
                 />
               </svg>
             </div>
-            <h4>Licença Permanente</h4>
+            <h4>Licença permanente</h4>
             <p>Sem mensalidades. Pague uma vez e use o sistema para sempre</p>
           </div>
         </div>
 
         <div class="company-info fade-in">
-          <h4>Informações da Empresa</h4>
+          <h4>Informações da empresa</h4>
           <div class="info-grid">
             <div class="info-item">
               <svg viewBox="0 0 24 24">
@@ -2723,7 +2734,7 @@
     <!-- FAQ -->
     <section class="faq section" id="faq">
       <div class="container">
-        <h2 class="section-title fade-in">Perguntas Frequentes</h2>
+        <h2 class="section-title fade-in">Perguntas frequentes</h2>
         <p class="section-subtitle fade-in">
           Tire suas dúvidas sobre o sistema
         </p>
@@ -2731,7 +2742,7 @@
         <div class="faq-list">
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              O sistema possui mensalidade?
+              O sistema tem mensalidade?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2740,16 +2751,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Não! O Precifica+ é um pagamento único. Você paga apenas uma vez
-                (R$ 129,90) e tem acesso vitalício ao sistema, sem nenhuma
-                mensalidade, assinatura ou taxa recorrente.
+                Não! O Precifica+ é um pagamento único de R$ 129,90. Você paga
+                uma vez e tem acesso vitalício, sem nenhuma mensalidade,
+                assinatura ou taxa escondida.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Funciona no celular?
+              Funciona no celular e no computador?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2758,16 +2769,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Sim! O sistema funciona perfeitamente em smartphones Android.
-                Você também pode usar em tablets, computadores e notebooks. É
-                compatível com Android, Windows, macOS e Linux.
+                Sim! O sistema é multiplataforma e funciona perfeitamente em
+                Android, Windows, macOS e Linux. Você pode usar no celular,
+                tablet ou computador.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Funciona no computador?
+              Preciso instalar algo complicado?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2776,16 +2787,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Sim! O Precifica+ é multiplataforma e funciona em Windows, macOS
-                e Linux. Você pode usar no seu computador, notebook ou notebook
-                sem problemas.
+                <strong>Não!</strong> O sistema não precisa de instalação
+                complexa. É só baixar e usar imediatamente. O processo é simples
+                e rápido, e enviamos um vídeo tutorial explicando passo a passo.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Recebo imediatamente após a compra?
+              Como recebo o sistema após a compra?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2794,17 +2805,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Sim! Assim que o pagamento for confirmado (o que acontece em
-                poucos minutos para cartões de crédito e PIX), você receberá um
-                e-mail com o link para download do sistema e acesso ao
-                treinamento.
+                O acesso é imediato! Assim que o pagamento for confirmado (em
+                poucos minutos para PIX e cartão), você recebe um e-mail com o
+                link para download e acesso ao treinamento.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Posso usar para sempre?
+              Tenho direito a suporte?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2813,16 +2823,15 @@
             </button>
             <div class="faq-answer">
               <p>
-                Sim! A licença é vitalícia. Você compra uma vez e pode usar o
-                sistema por quanto tempo quiser, sem limitações de tempo ou
-                funcionalidades.
+                Sim! Oferecemos suporte técnico totalmente gratuito via WhatsApp
+                (11) 91002-1244 ou e-mail para tirar qualquer dúvida.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Preciso instalar o sistema?
+              Posso usar sem internet?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2831,18 +2840,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                <strong>Não!</strong> O sistema
-                <strong>não precisa de instalação</strong>. É só baixar e usar
-                imediatamente. O processo é simples e rápido - você recebe o
-                arquivo, baixa no seu dispositivo e já pode começar a utilizar.
-                Enviamos um vídeo tutorial explicando passo a passo como usar.
+                Sim! Após o download, o sistema funciona 100% offline. Seus
+                dados ficam armazenados localmente no seu dispositivo,
+                garantindo total privacidade e disponibilidade.
               </p>
             </div>
           </div>
 
           <div class="faq-item fade-in">
             <button class="faq-question" aria-expanded="false">
-              Posso usar em quantos dispositivos?
+              Como funciona a licença?
               <svg viewBox="0 0 24 24">
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -2851,54 +2858,10 @@
             </button>
             <div class="faq-answer">
               <p>
-                Sua licença é válida para <strong>até 3 dispositivos</strong>.
-                Você pode usar no seu computador, celular e tablet
-                simultaneamente, por exemplo.
-              </p>
-              <p style="margin-top: 10px">
-                <strong>Importante:</strong> Como o sistema funciona 100%
-                offline (não requer internet),
-                <strong>não há sincronização automática</strong> de dados entre
-                os dispositivos. Porém, você pode usar o
-                <strong>sistema de backups</strong> para transferir suas
-                informações entre os dispositivos manualmente - basta exportar o
-                backup de um dispositivo e importar no outro.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
-              Como funciona o suporte?
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                O suporte é totalmente gratuito e pode ser feito via WhatsApp
-                (11) 91002-1244 ou e-mail. Nossa equipe está pronta para ajudar
-                com qualquer dúvida ou problema técnico que você possa ter.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
-              Preciso de internet para usar?
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Não! Após baixar, o sistema funciona 100% offline. Você não
-                precisa de internet para usar o Precifica+ no dia a dia. Seus
-                dados ficam armazenados localmente no seu dispositivo.
+                Sua licença é vitalícia e válida para até 3 dispositivos. Como o
+                sistema é offline, não há sincronização automática, mas você
+                pode usar o sistema de backups para transferir seus dados
+                manualmente entre os aparelhos.
               </p>
             </div>
           </div>
@@ -2910,8 +2873,8 @@
     <section class="cta-final section">
       <div class="container">
         <h2 class="fade-in">
-          Pare de Perder Dinheiro<br />
-          <span>Comece a Lucrar Hoje!</span>
+          Pare de perder dinheiro<br />
+          <span>Comece a lucrar hoje!</span>
         </h2>
 
         <p class="fade-in">
@@ -2925,7 +2888,7 @@
               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
             />
           </svg>
-          Acesso Imediato • Licença Vitalícia • Sem Mensalidade
+          Acesso imediato • Licença vitalícia • Sem mensalidade
         </div>
 
         <div class="cta-price fade-in">R$ 129,90</div>
@@ -2964,13 +2927,12 @@
         </div>
 
         <div class="footer-links">
-          <a href="#beneficios">Benefícios</a>
-          <a href="#recursos">Recursos</a>
+          <a href="#problema">O problema</a>
+          <a href="#solucao">Solução</a>
           <a href="#demo">Demonstração</a>
           <a href="#preco">Preço</a>
           <a href="#faq">FAQ</a>
-          <a
-            href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
+          <a href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
             >Comprar</a
           >
         </div>
@@ -3010,6 +2972,15 @@
       mobileMenuBtn.addEventListener("click", () => {
         header.classList.toggle("menu-open");
         mobileMenuBtn.classList.toggle("active");
+      });
+
+      // CORREÇÃO: Fechar menu ao clicar em um link
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          header.classList.remove("menu-open");
+          mobileMenuBtn.classList.remove("active");
+        });
       });
 
       // ============================================
@@ -3147,4 +3118,5 @@
     </script>
   </body>
 </html>
+
 
