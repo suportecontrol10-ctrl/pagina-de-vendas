@@ -1603,10 +1603,7 @@
           justify-content: center;
         }
 
-        .hero-image,
-        .entrepreneur-image {
-          order: -1;
-        }
+        /* REMOVIDO: order: -1 para que o texto fique acima da imagem no celular */
 
         .floating-elements {
           display: none;
@@ -1783,12 +1780,16 @@
           <a href="#prova-social">Pessoas que já usam</a>
           <a href="#preco">Preço</a>
           <a href="#faq">FAQ</a>
-          <a
-            href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
-            class="btn btn-primary"
-            style="padding: 10px 25px; font-size: 0.95rem"
-            >Comprar agora via hotmart</a
-          >
+          <div style="text-align: center">
+            <a
+              href="https://pay.hotmart.com/V106789365U?bid=1784587977712"
+              class="btn btn-primary"
+              style="padding: 10px 25px; font-size: 0.95rem"
+            >
+              Comprar agora via Hotmart.
+              <br />Apenas 2x R$ 39,95 (sem mensalidades)
+            </a>
+          </div>
         </nav>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
           <span></span>
@@ -1828,6 +1829,7 @@
             mercadoria, cubra todos os seus custos e garanta o lucro que seu
             restaurante, pizzaria, hamburgueria ou lanchonete merece!
           </p>
+
           <p class="hero-description">
             Chega de trabalhar muito e ver o dinheiro sumir. Com o Precifica+,
             você tem controle total dos seus custos e maximiza seus lucros com
@@ -1842,7 +1844,7 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              Compra 100% segura via hotmart
+              Compra 100% segura via hotmart, BAIXE NA HORA
             </div>
 
             <div class="hero-badge">
@@ -1959,18 +1961,23 @@
           trabalho pesado de calcular seus lucros automaticamente.
         </p>
 
-     
-<div class="video-container fade-in">
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/MuOxE8Ig2hk"
-      title="Demonstração do Sistema Precifica+"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
+        <div class="video-container fade-in">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/MuOxE8Ig2hk"
+              title="Demonstração do Sistema Precifica+"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
             </iframe>
           </div>
         </div>
@@ -2124,7 +2131,7 @@
               align-items: center;
             "
           >
-            <!--CARD 04 -->
+            <!--CARD 04-->
             <div class="feature-icon" style="margin-bottom: 15px">
               <span style="font-size: 1.5rem; font-weight: 800">4</span>
             </div>
@@ -2573,6 +2580,7 @@
               </svg>
               Comprar agora via Hotmart
             </a>
+
             <div class="pricing-guarantee">
               <svg viewBox="0 0 24 24">
                 <path
@@ -2580,6 +2588,15 @@
                 />
               </svg>
               Compra 100% segura • Garantia de 7 dias
+            </div>
+
+            <div class="pricing-guarantee">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                />
+              </svg>
+              Baixe na hora, logo após a compra
             </div>
           </div>
         </div>
@@ -2952,7 +2969,7 @@
               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
             />
           </svg>
-          Acesso imediato • Licença vitalícia • Sem mensalidade
+          Acesso imediato • Licença vitalícia • Sem mensalidade • Baixe na hora
         </div>
 
         <div class="cta-price fade-in">R$ 79,90</div>
